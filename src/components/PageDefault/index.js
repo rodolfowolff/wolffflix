@@ -4,13 +4,20 @@ import Footer from '../Footer';
 import styled from 'styled-components';
 
 const Main = styled.main`
-    background-color: var(--black);
+    background: var(--grayDark);
     color: var(--white);
     flex: 1;
-    padding-top: 50px;
+    padding-top: 94px;
     padding-left: 5%;
     padding-right: 5%;
+
+    @media (max-widht:800px){
+    max-width: 105px;
+    padding-top: 40px;
+}
+
     `;
+
 
 function PageDefault({children}) {
     return(
@@ -21,6 +28,7 @@ function PageDefault({children}) {
         {children}
         </Main>
         <Footer />
+
         </>
     );
 }
